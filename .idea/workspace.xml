@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e508de1d-8d59-4fc8-8341-7c89d3614955" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/renderer/actions/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/renderer/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/renderer/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/renderer/components/LoggedIn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/renderer/components/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/renderer/containers/LoggedInPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/renderer/containers/LoginPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/renderer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/renderer/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/renderer/reducers/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/electron-builder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/electron-builder.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="e508de1d-8d59-4fc8-8341-7c89d3614955" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -30,8 +17,8 @@
       <file leaf-file-name="FullWidthTabs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/FullWidthTabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="300">
+              <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -262,12 +249,12 @@
       <workItem from="1538418833753" duration="2705000" />
       <workItem from="1538501703277" duration="401000" />
       <workItem from="1538809757282" duration="20674000" />
-      <workItem from="1538850339965" duration="226000" />
+      <workItem from="1538850339965" duration="522000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26082000" />
+    <option name="totallyTimeSpent" value="26378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="937" extended-state="6" />
@@ -592,8 +579,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/FullWidthTabs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="300">
+          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
