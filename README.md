@@ -6,7 +6,7 @@ Searching for feedback of items on eBay by copying the item page url from eBay w
 ## Clone
 
 ```bash
-git clone https://zoharbob@bitbucket.org/zoharbob/ebay-feedback-search-electron-react.git
+git clone https://github.com/zoharbob/ebayFeedbackSearch-electron-react.git
 ```
 ## Install
 ```bash
