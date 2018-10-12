@@ -1,35 +1,20 @@
-# electron-react-redux-boilerplate
-[![Build Status](https://api.travis-ci.org/jschr/electron-react-redux-boilerplate.svg)](https://travis-ci.org/jschr/electron-react-redux-boilerplate)
-[![dependencies Status](https://david-dm.org/jschr/electron-react-redux-boilerplate/status.svg)](https://david-dm.org/jschr/electron-react-redux-boilerplate)
-[![devDependencies Status](https://david-dm.org/jschr/electron-react-redux-boilerplate/dev-status.svg)](https://david-dm.org/jschr/electron-react-redux-boilerplate?type=dev)
+## eBay Feedback Search
 
-A minimal boilerplate to get started with [Electron](http://electron.atom.io/), [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/).
+An Electron + React app
+Searching for feedback of items on eBay by copying the item page url from eBay website.
 
-Including:
+## Clone
 
-* [React Router](https://reacttraining.com/react-router/)
-* [Redux Thunk](https://github.com/gaearon/redux-thunk/)
-* [Redux Actions](https://github.com/acdlite/redux-actions/)
-* [Redux Local Storage](https://github.com/elgerlambert/redux-localstorage/)
-* [Electron Packager](https://github.com/electron-userland/electron-packager)
-* [Electron DevTools Installer](https://github.com/MarshallOfSound/electron-devtools-installer)
-* [Electron Mocha](https://github.com/jprichardson/electron-mocha)
-* [Browsersync](https://browsersync.io/)
-
-## Quick start
-
-Clone the repository
 ```bash
-git clone --depth=1 git@github.com:jschr/electron-react-redux-boilerplate.git
+git clone https://github.com/zoharbob/ebayFeedbackSearch-electron-react.git
 ```
-
-Install dependencies
+## Install
 ```bash
-cd electron-react-redux-boilerplate
+cd ebayFeedbackSearch-electron-react
 npm install
 ```
 
-Development
+## Running
 ```bash
 npm run develop
 ```
@@ -43,10 +28,6 @@ Toggle DevTools:
 * Windows: <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd> or <kbd>F12</kbd>
 
 ## Packaging
-
-Modify [electron-builder.yml](./electron-builder.yml) to edit package info.
-
-For a full list of options see: https://github.com/electron-userland/electron-builder/wiki/Options.
 
 Create a package for OSX, Windows and Linux
 ```
@@ -66,12 +47,4 @@ npm run pack:linux
 npm run test
 ```
 
-## Maintainers
-
-- [@jschr](https://github.com/jschr)
-- [@pronebird](https://github.com/pronebird)
-
-## Apps using this boilerplate
-
-- [Mullvad VPN app](https://github.com/mullvad/mullvadvpn-app)
-- [YouTube Downloader Electron](https://github.com/vanzylv/youtube-downloader-electron)
+Used [electron-react-redux-boilerplate](https://github.com/jschr/electron-react-redux-boilerplate) for this project.
