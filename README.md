@@ -1,6 +1,6 @@
 ## eBay Feedback Search
 
-An Electron + React app
+An Electron + React app,
 Searching for feedback of items on eBay by copying the item page url from eBay website.
 
 ## Clone
