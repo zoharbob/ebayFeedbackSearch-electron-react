@@ -1,6 +1,6 @@
 {
   "name": "electron-react-redux-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "electron-react-redux-boilerplate",
   "main": "init.js",
   "author": {

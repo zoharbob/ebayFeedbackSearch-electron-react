@@ -1,5 +1,5 @@
 import path from 'path';
-import { app, crashReporter, BrowserWindow, Menu } from 'electron';
+import { app, crashReporter, BrowserWindow, Menu, dialog, ipcMain} from 'electron';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -84,32 +84,52 @@ app.on('ready', async () => {
   });
 
   if (isDevelopment) {
+
     // auto-open dev tools
     mainWindow.webContents.openDevTools();
 
-    // add inspect element on right click menu
-    mainWindow.webContents.on('context-menu', (e, props) => {
-      Menu.buildFromTemplate([
+    const menuTemplate = [
+      {
+        label: 'Electron'
+      },
+      {
+        label: "Edit",
+        submenu: [
+          { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
+          { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
+          { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
+          { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" },
+        ]
+      },
+      // {
+      //   label: 'Dialog',
+      //   submenu: [
+      //     {
+      //       label:'dialog', click() {
+      //         dialog.showMessageBox({message: 'Made By Zohar Bobrin', buttons: ["OK"] });
+      //       }
+      //     }
+      //   ]
+      // }
+    ];
+
+    menuTemplate.push({
+      label: 'View',
+      submenu: [
+        { role: 'reload' },
         {
-          label: 'Inspect element',
-          click() {
-            mainWindow.inspectElement(props.x, props.y);
+          label: 'Toggle Developer Tools',
+          accelerator: process.platform === 'darwin' ? 'Command+Alt+I' : 'Ctrl+Shift+I',
+          click(item, focusedWindow) {
+            focusedWindow.toggleDevTools();
           },
-        },
-        {
-          label: "Edit",
-          submenu: [
-            { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
-            { label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
-            { type: "separator" },
-            { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
-            { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
-            { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
-            { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
-          ]
-        },
-      ]).popup(mainWindow);
-    });
+        }
+      ]});
+
+    const menu = Menu.buildFromTemplate(menuTemplate);
+
+    Menu.setApplicationMenu(menu);
+
   } else {
 
     var template = [{
@@ -117,7 +137,7 @@ app.on('ready', async () => {
       submenu: [
         { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
         { type: "separator" },
-        { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
+        { label: "Quit", accelerator: process.platform  === 'darwin' ? "Command+Q" : "Ctrl+Q" , click: function() { app.quit(); }}
       ]}, {
       label: "Edit",
       submenu: [

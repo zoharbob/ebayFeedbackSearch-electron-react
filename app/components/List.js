@@ -2,44 +2,17 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { withStyles } from '@material-ui/core/styles';
 
-const feedbackArray = [
-  {
-    "feedback": "Great item A+++",
-    "rating": "positive",
-    "when": "one month ago"
-  },
-  {
-    "feedback": "fast shipping",
-    "rating": "positive",
-    "when": "2 months ago"
-  },
-  {
-    "feedback": "ok",
-    "rating": "nuteral",
-    "when": "one month ago"
-  },
-  {
-    "feedback": "Work as expected A+++",
-    "rating": "positive",
-    "when": "2 months ago"
-  },
-  {
-    "feedback": "never arrived",
-    "rating": "negative",
-    "when": "one month ago"
-  },
-  {
-    "feedback": "Great Seller",
-    "rating": "positive",
-    "when": "3 months ago"
-  },
-  {
-    "feedback": "Item was broken",
-    "rating": "negative",
-    "when": "one month ago"
+const styles = () => ({
+  root: {
+    width: 100 + '%',
+    padding: 0,
+    position: 'relative',
+    overflow: 'auto',
+    maxHeight: window.innerHeight - 168
   }
-]
+});
 
 const getListItemsByValue = (value, data) => {
 
@@ -66,13 +39,13 @@ const getListItemsByValue = (value, data) => {
   }
 }
 
-const FolderList = ({tabValue, data}) => {
+const FolderList = ({tabValue, data, classes}) => {
 
   const {filteredArr, listItemColor} = getListItemsByValue(tabValue, data);
 
   return (
     <div>
-      <List>
+      <List className={classes.root}>
         {
           filteredArr.map( ({feedback, when}, i) => (
             <ListItem key={i} style={{backgroundColor: listItemColor}}>
@@ -85,4 +58,4 @@ const FolderList = ({tabValue, data}) => {
   );
 }
 
-export default FolderList;
+export default withStyles(styles)(FolderList);
